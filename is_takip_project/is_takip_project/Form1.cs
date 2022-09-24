@@ -28,5 +28,11 @@ namespace is_takip_project
             frm.MdiParent = this;
             frm.Show();
         }
+
+         //ADO.NET
+        //metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res:
+        //    //*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string="data source=
+        //             //.\SQLEXPRESS;initial catalog=DbisTakip;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+
     }
 }
