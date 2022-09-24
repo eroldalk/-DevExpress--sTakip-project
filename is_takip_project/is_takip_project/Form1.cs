@@ -21,5 +21,12 @@ namespace is_takip_project
         {
 
         }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.frmDepartmanlar frm = new Formlar.frmDepartmanlar();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
