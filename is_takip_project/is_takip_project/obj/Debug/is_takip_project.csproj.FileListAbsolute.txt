@@ -82,3 +82,7 @@ C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_pro
 C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\de\DevExpress.Office.v22.1.Core.resources.dll
 C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\es\DevExpress.Office.v22.1.Core.resources.dll
 C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\ja\DevExpress.Office.v22.1.Core.resources.dll
+C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\EntityFramework.dll
+C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\EntityFramework.xml
+C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\bin\Debug\EntityFramework.SqlServer.xml
