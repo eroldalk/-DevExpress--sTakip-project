@@ -53,5 +53,16 @@ namespace is_takip_project.Formlar
 
 
         }
+
+        private void btnsil_Click(object sender, EventArgs e)
+        {
+            int x = int.Parse(txtıd.Text);
+            var deger=db.TBLdepartmanlar.Find(x);
+            db.TBLdepartmanlar.Remove(deger);
+            db.SaveChanges();
+            XtraMessageBox.Show("Departman silme işlemi başarılı bir şekilde gerçekleşti", "Bilgi",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listele();
+        }
     }
 }

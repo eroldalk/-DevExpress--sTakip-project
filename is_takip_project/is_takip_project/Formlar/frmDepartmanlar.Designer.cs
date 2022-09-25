@@ -62,6 +62,8 @@
             // 
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // groupControl1
             // 
@@ -99,6 +101,7 @@
             this.btnsil.Size = new System.Drawing.Size(227, 35);
             this.btnsil.TabIndex = 6;
             this.btnsil.Text = "Sil";
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btnekle
             // 
