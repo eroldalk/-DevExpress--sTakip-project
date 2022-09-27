@@ -61,6 +61,7 @@
     <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
     <Property Name="Gorsel" Type="nvarchar" MaxLength="100" />
     <Property Name="Departman" Type="int" />
+    <Property Name="Durum" Type="bit" />
   </EntityType>
   <Association Name="FK_TBLGorevDetaylar_TBLGorevler">
     <End Role="TBLGorevler" Type="Self.TBLGorevler" Multiplicity="0..1" />

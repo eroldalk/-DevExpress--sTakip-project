@@ -118,7 +118,7 @@
             this.barButtonItem24,
             this.barButtonItem25});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 27;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 412;
@@ -179,8 +179,8 @@
             // 
             this.btnpersonellistesi.Caption = "Personel Listesi";
             this.btnpersonellistesi.Id = 6;
-            this.btnpersonellistesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.btnpersonellistesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.btnpersonellistesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnpersonellistesi.ImageOptions.Image")));
+            this.btnpersonellistesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnpersonellistesi.ImageOptions.LargeImage")));
             this.btnpersonellistesi.Name = "btnpersonellistesi";
             this.btnpersonellistesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnpersonellistesi_ItemClick);
             // 
@@ -199,6 +199,7 @@
             this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
             this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
             this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // barButtonItem9
             // 

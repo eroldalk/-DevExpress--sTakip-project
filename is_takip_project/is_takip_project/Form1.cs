@@ -35,6 +35,13 @@ namespace is_takip_project
             frm2.Show();
         }
 
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.frmpersonelleristatistik frm3 = new Formlar.frmpersonelleristatistik();
+            frm3.MdiParent = this;
+            frm3.Show();
+        }
+
         //ADO.NET
         //metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res:
         //    //*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string="data source=

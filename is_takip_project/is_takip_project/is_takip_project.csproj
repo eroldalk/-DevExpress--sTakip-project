@@ -116,6 +116,12 @@
     <Compile Include="Formlar\frmpersoneller.Designer.cs">
       <DependentUpon>frmpersoneller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmpersonelleristatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmpersonelleristatistik.Designer.cs">
+      <DependentUpon>frmpersonelleristatistik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmpersoneller.resx">
       <DependentUpon>frmpersoneller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmpersonelleristatistik.resx">
+      <DependentUpon>frmpersonelleristatistik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

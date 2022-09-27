@@ -69,6 +69,7 @@
     <NavigationProperty Name="TBLdepartmanlar" Relationship="Self.FK_TBLPersonel_TBLdepartmanlar" FromRole="TBLPersonel" ToRole="TBLdepartmanlar" />
     <NavigationProperty Name="TBLGorevler" Relationship="Self.FK_TBLGorevler_TBLPersonel" FromRole="TBLPersonel" ToRole="TBLGorevler" />
     <NavigationProperty Name="TBLGorevler1" Relationship="Self.FK_TBLGorevler_TBLPersonel1" FromRole="TBLPersonel" ToRole="TBLGorevler" />
+    <Property Name="Durum" Type="Boolean" />
   </EntityType>
   <Association Name="FK_TBLPersonel_TBLdepartmanlar">
     <End Role="TBLdepartmanlar" Type="Self.TBLdepartmanlar" Multiplicity="0..1" />

@@ -79,6 +79,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // groupControl1
             // 
@@ -110,31 +111,33 @@
             this.btngüncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btngüncelle.Appearance.Options.UseFont = true;
             this.btngüncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btngüncelle.ImageOptions.Image")));
-            this.btngüncelle.Location = new System.Drawing.Point(152, 497);
+            this.btngüncelle.Location = new System.Drawing.Point(151, 404);
             this.btngüncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btngüncelle.Name = "btngüncelle";
             this.btngüncelle.Size = new System.Drawing.Size(223, 33);
             this.btngüncelle.TabIndex = 7;
             this.btngüncelle.Text = "Güncelle";
+            this.btngüncelle.Click += new System.EventHandler(this.btngüncelle_Click);
             // 
             // btnsil
             // 
             this.btnsil.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnsil.Appearance.Options.UseFont = true;
             this.btnsil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsil.ImageOptions.Image")));
-            this.btnsil.Location = new System.Drawing.Point(152, 449);
+            this.btnsil.Location = new System.Drawing.Point(149, 356);
             this.btnsil.Margin = new System.Windows.Forms.Padding(5);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(223, 38);
             this.btnsil.TabIndex = 6;
             this.btnsil.Text = "Sil";
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // btnekle
             // 
             this.btnekle.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnekle.Appearance.Options.UseFont = true;
             this.btnekle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnekle.ImageOptions.Image")));
-            this.btnekle.Location = new System.Drawing.Point(152, 400);
+            this.btnekle.Location = new System.Drawing.Point(151, 307);
             this.btnekle.Margin = new System.Windows.Forms.Padding(5);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(223, 39);
@@ -172,7 +175,7 @@
             this.btnlistele.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnlistele.Appearance.Options.UseFont = true;
             this.btnlistele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnlistele.ImageOptions.Image")));
-            this.btnlistele.Location = new System.Drawing.Point(153, 355);
+            this.btnlistele.Location = new System.Drawing.Point(152, 262);
             this.btnlistele.Margin = new System.Windows.Forms.Padding(5);
             this.btnlistele.Name = "btnlistele";
             this.btnlistele.Size = new System.Drawing.Size(223, 35);

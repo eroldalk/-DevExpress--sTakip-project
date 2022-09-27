@@ -30,10 +30,11 @@ namespace is_takip_project.Formlar
                                x.Ad,
                                x.Soyad,
                                x.Mail,
-                               x.Departman
+                               Departman = x.TBLdepartmanlar.Ad,
+                               x.Durum
 
                            };
-            gridControl1.DataSource = degerler.ToList();
+            gridControl1.DataSource = degerler.Where(x=> x.Durum == true).ToList();
         }
 
         private void frmpersoneller_Load(object sender, EventArgs e)
@@ -71,11 +72,47 @@ namespace is_takip_project.Formlar
         }
 
 
+        private void btnsil_Click(object sender, EventArgs e)
+        {
+            var x = int.Parse(txtıd.Text);
+            var deger = db.TBLPersonel.Find(x);
+            deger.Durum = false;
+            db.SaveChanges();
+            XtraMessageBox.Show("personel başırılı bir şekilde silindi,silinen personeller listesinden tüm silinmiş personel bilgilerine ulaşabilirsiniz ..."
+                , "Bilgi",
+            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            personeller();
+        }
+
+         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+         {
+           
+            txtıd.Text = gridView1.GetFocusedRowCellValue("ID").ToString();
+            txtad.Text = gridView1.GetFocusedRowCellValue("Ad").ToString();
+            txtsoyad.Text = gridView1.GetFocusedRowCellValue("Soyad").ToString();
+            txtmail.Text = gridView1.GetFocusedRowCellValue("Mail").ToString();
+       ///     txtgorsel.Text = gridView1.GetFocusedRowCellValue("Görsel").ToString();
+            lookUpEdit1.Text = gridView1.GetFocusedRowCellValue("Departman").ToString();
 
 
+        }
 
+        private void btngüncelle_Click(object sender, EventArgs e)
+        {
+            int x = int.Parse(txtıd.Text);
+            var deger = db.TBLPersonel.Find(x);
+            deger.Ad=txtad.Text;
+            deger.Soyad=txtsoyad.Text;
+            deger.Mail=txtmail.Text;
+            deger.Gorsel=txtgorsel.Text;
+            deger.Departman=int.Parse(lookUpEdit1.EditValue.ToString());
+            db.SaveChanges();
+            XtraMessageBox.Show("personel başırılı bir şekilde güncellendi ..."
+               , "Bilgi",
+           MessageBoxButtons.OK, MessageBoxIcon.Question);
+            personeller();
 
-
+        }
 
 
 
@@ -95,6 +132,6 @@ namespace is_takip_project.Formlar
 
         }
 
-      
+       
     }
 }
