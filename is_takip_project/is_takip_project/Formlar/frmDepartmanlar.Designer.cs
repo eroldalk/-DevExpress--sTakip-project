@@ -51,9 +51,9 @@
             // gridControl1
             // 
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Location = new System.Drawing.Point(-4, 2);
+            this.gridControl1.Location = new System.Drawing.Point(1, -4);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1005, 549);
             this.gridControl1.TabIndex = 0;
@@ -72,7 +72,7 @@
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(14, 42);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(88, 16);
             this.labelControl1.TabIndex = 0;
@@ -84,7 +84,7 @@
             this.btnlistele.Appearance.Options.UseFont = true;
             this.btnlistele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnlistele.ImageOptions.Image")));
             this.btnlistele.Location = new System.Drawing.Point(134, 141);
-            this.btnlistele.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnlistele.Margin = new System.Windows.Forms.Padding(5);
             this.btnlistele.Name = "btnlistele";
             this.btnlistele.Size = new System.Drawing.Size(236, 51);
             this.btnlistele.TabIndex = 1;
@@ -94,7 +94,7 @@
             // txtıd
             // 
             this.txtıd.Location = new System.Drawing.Point(134, 39);
-            this.txtıd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtıd.Margin = new System.Windows.Forms.Padding(5);
             this.txtıd.Name = "txtıd";
             this.txtıd.Size = new System.Drawing.Size(236, 22);
             this.txtıd.TabIndex = 2;
@@ -102,7 +102,7 @@
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(14, 97);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(94, 16);
             this.labelControl2.TabIndex = 3;
@@ -111,7 +111,7 @@
             // txtad
             // 
             this.txtad.Location = new System.Drawing.Point(134, 95);
-            this.txtad.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtad.Margin = new System.Windows.Forms.Padding(5);
             this.txtad.Name = "txtad";
             this.txtad.Size = new System.Drawing.Size(236, 22);
             this.txtad.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.btnekle.Appearance.Options.UseFont = true;
             this.btnekle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnekle.ImageOptions.Image")));
             this.btnekle.Location = new System.Drawing.Point(134, 216);
-            this.btnekle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnekle.Margin = new System.Windows.Forms.Padding(5);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(236, 55);
             this.btnekle.TabIndex = 5;
@@ -135,7 +135,7 @@
             this.btnsil.Appearance.Options.UseFont = true;
             this.btnsil.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsil.ImageOptions.Image")));
             this.btnsil.Location = new System.Drawing.Point(133, 292);
-            this.btnsil.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnsil.Margin = new System.Windows.Forms.Padding(5);
             this.btnsil.Name = "btnsil";
             this.btnsil.Size = new System.Drawing.Size(236, 53);
             this.btnsil.TabIndex = 6;
@@ -148,7 +148,7 @@
             this.btngüncelle.Appearance.Options.UseFont = true;
             this.btngüncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btngüncelle.ImageOptions.Image")));
             this.btngüncelle.Location = new System.Drawing.Point(133, 366);
-            this.btngüncelle.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btngüncelle.Margin = new System.Windows.Forms.Padding(5);
             this.btngüncelle.Name = "btngüncelle";
             this.btngüncelle.Size = new System.Drawing.Size(236, 48);
             this.btngüncelle.TabIndex = 7;
@@ -166,7 +166,7 @@
             this.groupControl1.Controls.Add(this.btnlistele);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(1001, 2);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(470, 549);
             this.groupControl1.TabIndex = 1;
