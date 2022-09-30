@@ -1,0 +1,1 @@
+Select GorevAlan,Count(*) From TBLGorevler Group By GorevAlan order by Count(*) Desc
