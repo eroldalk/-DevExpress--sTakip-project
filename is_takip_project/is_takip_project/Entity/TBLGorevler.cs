@@ -24,7 +24,7 @@ namespace is_takip_project.Entity
         public Nullable<int> Gorev_Veren { get; set; }
         public Nullable<int> GorevAlan { get; set; }
         public string Aciklama { get; set; }
-        public string Durum { get; set; }
+        public Nullable<bool> Durum { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

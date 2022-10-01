@@ -28,14 +28,18 @@ namespace is_takip_project.Formlar
                                            x.Aciklama
                                        }).ToList();
 
-            chartControl1.Series["Series 1"].Points.AddPoint("İnsan Kayakları", 26);
-            chartControl1.Series["Series 1"].Points.AddPoint("Yazılım", 34);
-            chartControl1.Series["Series 1"].Points.AddPoint("Muhasebe", 18);
-            chartControl1.Series["Series 1"].Points.AddPoint("Mutfak", 16);
-            chartControl1.Series["Series 1"].Points.AddPoint("Temizlik", 21);
-            chartControl1.Series["Series 1"].Points.AddPoint("Staj", 19);
-           
-            
+
+            lblaktifgorev.Text = db.TBLGorevler.Where(x => x.Durum == true).Count().ToString();
+            lblpasifgorev.Text = db.TBLGorevler.Where(x => x.Durum == false).Count().ToString();
+            lbltoplamdepart.Text = db.TBLdepartmanlar.Count().ToString();
+
+
+
+
+            chartControl1.Series["Durum"].Points.AddPoint("Aktif Görevler", int.Parse(lblaktifgorev.Text));
+            chartControl1.Series["Durum"].Points.AddPoint("Pasif Görevler", int.Parse(lblpasifgorev.Text));
+
+
 
 
 
