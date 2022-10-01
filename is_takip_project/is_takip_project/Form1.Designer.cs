@@ -43,7 +43,7 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.btnGörevListesi = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.btngorevtanimlama = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
@@ -103,7 +103,7 @@
             this.barButtonItem10,
             this.barButtonItem11,
             this.btnGörevListesi,
-            this.barButtonItem13,
+            this.btngorevtanimlama,
             this.barButtonItem14,
             this.barButtonItem15,
             this.barButtonItem16,
@@ -132,7 +132,7 @@
             this.ribbonPage6});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCalcEdit1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1464, 176);
+            this.ribbonControl1.Size = new System.Drawing.Size(1437, 176);
             // 
             // barButtonItem1
             // 
@@ -230,18 +230,19 @@
             // 
             this.btnGörevListesi.Caption = "Görev Listesi";
             this.btnGörevListesi.Id = 12;
-            this.btnGörevListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.Image")));
-            this.btnGörevListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.btnGörevListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGörevListesi.ImageOptions.Image")));
+            this.btnGörevListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGörevListesi.ImageOptions.LargeImage")));
             this.btnGörevListesi.Name = "btnGörevListesi";
             this.btnGörevListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGörevListesi_ItemClick);
             // 
-            // barButtonItem13
+            // btngorevtanimlama
             // 
-            this.barButtonItem13.Caption = "Yeni Görev Tanımla";
-            this.barButtonItem13.Id = 13;
-            this.barButtonItem13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
-            this.barButtonItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
-            this.barButtonItem13.Name = "barButtonItem13";
+            this.btngorevtanimlama.Caption = "Yeni Görev Tanımla";
+            this.btngorevtanimlama.Id = 13;
+            this.btngorevtanimlama.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.Image")));
+            this.btngorevtanimlama.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.ImageOptions.LargeImage")));
+            this.btngorevtanimlama.Name = "btngorevtanimlama";
+            this.btngorevtanimlama.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btngorevtanimlama_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -435,7 +436,7 @@
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.btnGörevListesi);
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem13);
+            this.ribbonPageGroup8.ItemLinks.Add(this.btngorevtanimlama);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem14);
             this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem15);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
@@ -493,7 +494,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 759);
+            this.ClientSize = new System.Drawing.Size(1437, 759);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "Form1";
@@ -530,7 +531,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem btnGörevListesi;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem btngorevtanimlama;
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;

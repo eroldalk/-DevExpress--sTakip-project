@@ -49,6 +49,12 @@ namespace is_takip_project
             frm4.Show();
         }
 
+        private void btngorevtanimlama_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.frmGorev frm5 = new Formlar.frmGorev();
+            frm5.Show();
+        }
+
         //ADO.NET
         //metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res:
         //    //*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string="data source=

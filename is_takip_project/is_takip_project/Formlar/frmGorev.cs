@@ -16,5 +16,7 @@ namespace is_takip_project.Formlar
         {
             InitializeComponent();
         }
+
+       
     }
 }
