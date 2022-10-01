@@ -42,6 +42,13 @@ namespace is_takip_project
             frm3.Show();
         }
 
+        private void btnGörevListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.frmGörevListesi frm4 = new Formlar.frmGörevListesi();
+            frm4.MdiParent = this;
+            frm4.Show();
+        }
+
         //ADO.NET
         //metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res:
         //    //*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string="data source=

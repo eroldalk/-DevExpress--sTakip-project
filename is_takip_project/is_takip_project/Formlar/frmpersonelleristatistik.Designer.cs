@@ -140,7 +140,7 @@
             // 
             this.lblsonzaman.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblsonzaman.Appearance.Options.UseFont = true;
-            this.lblsonzaman.Location = new System.Drawing.Point(97, 85);
+            this.lblsonzaman.Location = new System.Drawing.Point(101, 85);
             this.lblsonzaman.Name = "lblsonzaman";
             this.lblsonzaman.Size = new System.Drawing.Size(26, 54);
             this.lblsonzaman.TabIndex = 1;
