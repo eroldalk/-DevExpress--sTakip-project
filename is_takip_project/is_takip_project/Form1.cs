@@ -41,12 +41,19 @@ namespace is_takip_project
             frm3.MdiParent = this;
             frm3.Show();
         }
-
+        Formlar.frmGörevListesi frm4; 
         private void btnGörevListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Formlar.frmGörevListesi frm4 = new Formlar.frmGörevListesi();
-            frm4.MdiParent = this;
-            frm4.Show();
+
+            if(frm4 == null || frm4.IsDisposed)
+            {
+
+                frm4 = new Formlar.frmGörevListesi();
+                frm4.MdiParent = this;                                              //if yazılımı için
+                frm4.Show();
+            }
+
+
         }
 
         private void btngorevtanimlama_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -61,10 +68,19 @@ namespace is_takip_project
             frm6.Show();
         }
 
-        //ADO.NET
-        //metadata=res://*/Entity.Model1.csdl|res://*/Entity.Model1.ssdl|res:
-        //    //*/Entity.Model1.msl;provider=System.Data.SqlClient;provider connection string="data source=
-        //             //.\SQLEXPRESS;initial catalog=DbisTakip;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+        Formlar.frmAnaform frm7;
+        private void BtnAnaform_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (frm7 == null || frm7.IsDisposed)
+            {
+
+                frm7 = new Formlar.frmAnaform();
+                frm7.MdiParent = this;                                              //if yazılımı için
+                frm7.Show();
+            }
+        }
+
+        
 
     }
 }
