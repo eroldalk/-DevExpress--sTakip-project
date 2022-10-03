@@ -122,6 +122,12 @@
     <Compile Include="Formlar\frmGorev.Designer.cs">
       <DependentUpon>frmGorev.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmGorevDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmGorevDetay.Designer.cs">
+      <DependentUpon>frmGorevDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\frmGörevListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmGorev.resx">
       <DependentUpon>frmGorev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmGorevDetay.resx">
+      <DependentUpon>frmGorevDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmGörevListesi.resx">
       <DependentUpon>frmGörevListesi.cs</DependentUpon>
