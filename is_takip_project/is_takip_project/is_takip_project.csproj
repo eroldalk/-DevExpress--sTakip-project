@@ -89,6 +89,9 @@
     <Compile Include="Entity\TBLAdmin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBLCagrilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBLdepartmanlar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

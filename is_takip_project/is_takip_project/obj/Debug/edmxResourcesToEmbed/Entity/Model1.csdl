@@ -29,6 +29,7 @@
     <Property Name="il" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="ilce" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBLCagrilar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar" FromRole="TBLFirmalar" ToRole="TBLCagrilar" />
   </EntityType>
   <EntityType Name="TBLGorevDetaylar">
     <Key>
@@ -142,5 +143,34 @@
       <End Role="TBLPersonel" EntitySet="TBLPersonel" />
       <End Role="TBLGorevler" EntitySet="TBLGorevler" />
     </AssociationSet>
+    <EntitySet Name="TBLCagrilar" EntityType="DbisTakipModel.TBLCagrilar" />
+    <AssociationSet Name="FK_TBLCagrilar_TBLFirmalar" Association="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar">
+      <End Role="TBLFirmalar" EntitySet="TBLFirmalar" />
+      <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="TBLCagrilar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CagriFirma" Type="Int32" />
+    <Property Name="Konu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="TBLFirmalar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar" FromRole="TBLCagrilar" ToRole="TBLFirmalar" />
+    <Property Name="Durum" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_TBLCagrilar_TBLFirmalar">
+    <End Type="DbisTakipModel.TBLFirmalar" Role="TBLFirmalar" Multiplicity="0..1" />
+    <End Type="DbisTakipModel.TBLCagrilar" Role="TBLCagrilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLFirmalar">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLCagrilar">
+        <PropertyRef Name="CagriFirma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

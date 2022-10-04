@@ -14,6 +14,12 @@ namespace is_takip_project.Entity
     
     public partial class TBLFirmalar
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TBLFirmalar()
+        {
+            this.TBLCagrilar = new HashSet<TBLCagrilar>();
+        }
+    
         public int ID { get; set; }
         public string Ad { get; set; }
         public string Yetkili { get; set; }
@@ -23,5 +29,8 @@ namespace is_takip_project.Entity
         public string il { get; set; }
         public string ilce { get; set; }
         public string Adres { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBLCagrilar> TBLCagrilar { get; set; }
     }
 }

@@ -26,10 +26,33 @@ namespace is_takip_project.Formlar
                                        select new
                                        {
                                            x.Aciklama,
-                                          adsoyad= x.TBLPersonel.Ad +" "+ x.TBLPersonel.Soyad
-                                           
-                                       }).ToList();
+                                           Personel= x.TBLPersonel.Ad +" "+ x.TBLPersonel.Soyad,
+                                           x.Durum
+                                       }).Where(y=>y.Durum == true).ToList();
+            gridView1.Columns["Durum"].Visible = false;
 
+            //Bugün yapılan görevler
+            DateTime bugun = DateTime.Parse(DateTime.Now.ToShortDateString());
+            gridControl2.DataSource = (from x in db.TBLGorevDetaylar
+                                       select new
+                                       {
+                                          Görev = x.TBLGorevler.Aciklama,
+                                          x.Aciklama,
+                                          x.Tarih
+                                       }).Where(x => x.Tarih == bugun).ToList();
+
+
+            //Aktif çağrı listesi
+
+            gridControl3.DataSource = (from x in db.TBLCagrilar
+                                       select new
+                                       {
+                                           x.TBLFirmalar.Ad,
+                                           x.Konu,
+                                           x.Tarih,
+                                           x.Durum
+                                       }).Where(x => x.Durum == true).ToList();
+            gridView3.Columns["Durum"].Visible = false;
 
         }
     }
