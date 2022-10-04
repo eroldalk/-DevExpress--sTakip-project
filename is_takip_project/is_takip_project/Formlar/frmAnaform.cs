@@ -56,7 +56,35 @@ namespace is_takip_project.Formlar
 
 
             //Fihrist Cmds
-            gridControl4.DataSource
+            gridControl4.DataSource = (from x in db.TBLFirmalar
+                                       select new
+                                       {
+                                           x.Ad,
+                                           x.Telefon,
+                                           x.Mail
+                                           
+                                       }).ToList();
+
+
+            // Çağrı grafikleri
+
+
+            int aktif_cagrilar = db.TBLCagrilar.Where(x => x.Durum == true).Count();
+            int pasif_cagrilar = db.TBLCagrilar.Where(x => x.Durum == false).Count();
+            
+
+
+
+
+            chartControl1.Series["Series 1"].Points.AddPoint("Aktif Çağrılar", aktif_cagrilar);
+            chartControl1.Series["Series 1"].Points.AddPoint("Pasif Çağrılar", pasif_cagrilar);
+
+
+
+
+
+
+
 
         }
     }
