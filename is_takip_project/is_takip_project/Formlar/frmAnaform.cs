@@ -54,6 +54,10 @@ namespace is_takip_project.Formlar
                                        }).Where(x => x.Durum == true).ToList();
             gridView3.Columns["Durum"].Visible = false;
 
+
+            //Fihrist Cmds
+            gridControl4.DataSource
+
         }
     }
 }
