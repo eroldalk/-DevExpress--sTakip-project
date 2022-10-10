@@ -244,7 +244,7 @@
             // 
             this.Btnvazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Btnvazgec.Appearance.Options.UseFont = true;
-            this.Btnvazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btnvazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btnvazgec.ImageOptions.Image")));
             this.Btnvazgec.Location = new System.Drawing.Point(200, 408);
             this.Btnvazgec.Name = "Btnvazgec";
             this.Btnvazgec.Size = new System.Drawing.Size(135, 43);
@@ -256,7 +256,7 @@
             // 
             this.Btnkaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Btnkaydet.Appearance.Options.UseFont = true;
-            this.Btnkaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.Btnkaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btnkaydet.ImageOptions.Image")));
             this.Btnkaydet.Location = new System.Drawing.Point(358, 408);
             this.Btnkaydet.Name = "Btnkaydet";
             this.Btnkaydet.Size = new System.Drawing.Size(143, 43);

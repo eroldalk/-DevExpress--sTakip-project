@@ -14,6 +14,12 @@ namespace is_takip_project.Entity
     
     public partial class TBLCagrilar
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TBLCagrilar()
+        {
+            this.TBLCagriDetay = new HashSet<TBLCagriDetay>();
+        }
+    
         public int ID { get; set; }
         public Nullable<int> CagriFirma { get; set; }
         public string Konu { get; set; }
@@ -22,5 +28,7 @@ namespace is_takip_project.Entity
         public Nullable<bool> Durum { get; set; }
     
         public virtual TBLFirmalar TBLFirmalar { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBLCagriDetay> TBLCagriDetay { get; set; }
     }
 }

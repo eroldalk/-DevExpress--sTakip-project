@@ -10,8 +10,18 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Kullanici" Type="nvarchar" MaxLength="10" />
-          <Property Name="Sifre" Type="nvarchar" MaxLength="10" />
+          <Property Name="Kullanici" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TBLCagriDetay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cagri" Type="int" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
+          <Property Name="Tarih" Type="date" />
+          <Property Name="Saat" Type="char" MaxLength="5" />
         </EntityType>
         <EntityType Name="TBLCagrilar">
           <Key>
@@ -40,10 +50,12 @@
           <Property Name="Yetkili" Type="nvarchar" MaxLength="30" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="20" />
           <Property Name="Sektor" Type="nvarchar" MaxLength="30" />
           <Property Name="il" Type="nvarchar" MaxLength="20" />
           <Property Name="ilce" Type="nvarchar" MaxLength="30" />
           <Property Name="Adres" Type="nvarchar" MaxLength="200" />
+          <Property Name="foto" Type="nvarchar" MaxLength="200" />
         </EntityType>
         <EntityType Name="TBLGorevDetaylar">
           <Key>
@@ -78,7 +90,20 @@
           <Property Name="Gorsel" Type="nvarchar" MaxLength="100" />
           <Property Name="Departman" Type="int" />
           <Property Name="Durum" Type="bit" />
+          <Property Name="Rol" Type="char" MaxLength="1" />
         </EntityType>
+        <Association Name="FK_TBLCagriDetay_TBLCagrilar">
+          <End Role="TBLCagrilar" Type="Self.TBLCagrilar" Multiplicity="0..1" />
+          <End Role="TBLCagriDetay" Type="Self.TBLCagriDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLCagrilar">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBLCagriDetay">
+              <PropertyRef Name="Cagri" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TBLCagrilar_TBLFirmalar">
           <End Role="TBLFirmalar" Type="Self.TBLFirmalar" Multiplicity="0..1" />
           <End Role="TBLCagrilar" Type="Self.TBLCagrilar" Multiplicity="*" />
@@ -141,12 +166,17 @@
         </Association>
         <EntityContainer Name="DbisTakipModelStoreContainer">
           <EntitySet Name="TBLAdmin" EntityType="Self.TBLAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLCagriDetay" EntityType="Self.TBLCagriDetay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLCagrilar" EntityType="Self.TBLCagrilar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLdepartmanlar" EntityType="Self.TBLdepartmanlar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLFirmalar" EntityType="Self.TBLFirmalar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLGorevDetaylar" EntityType="Self.TBLGorevDetaylar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLGorevler" EntityType="Self.TBLGorevler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLPersonel" EntityType="Self.TBLPersonel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBLCagriDetay_TBLCagrilar" Association="Self.FK_TBLCagriDetay_TBLCagrilar">
+            <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
+            <End Role="TBLCagriDetay" EntitySet="TBLCagriDetay" />
+          </AssociationSet>
           <AssociationSet Name="FK_TBLCagrilar_TBLFirmalar" Association="Self.FK_TBLCagrilar_TBLFirmalar">
             <End Role="TBLFirmalar" EntitySet="TBLFirmalar" />
             <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
@@ -177,8 +207,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Kullanici" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="Sifre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Kullanici" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TBLdepartmanlar">
           <Key>
@@ -202,6 +232,8 @@
           <Property Name="ilce" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TBLCagrilar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar" FromRole="TBLFirmalar" ToRole="TBLCagrilar" />
+          <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="foto" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TBLGorevDetaylar">
           <Key>
@@ -243,6 +275,7 @@
           <NavigationProperty Name="TBLGorevler" Relationship="Self.FK_TBLGorevler_TBLPersonel" FromRole="TBLPersonel" ToRole="TBLGorevler" />
           <NavigationProperty Name="TBLGorevler1" Relationship="Self.FK_TBLGorevler_TBLPersonel1" FromRole="TBLPersonel" ToRole="TBLGorevler" />
           <Property Name="Durum" Type="Boolean" />
+          <Property Name="Rol" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         <Association Name="FK_TBLPersonel_TBLdepartmanlar">
           <End Role="TBLdepartmanlar" Type="Self.TBLdepartmanlar" Multiplicity="0..1" />
@@ -320,6 +353,11 @@
             <End Role="TBLFirmalar" EntitySet="TBLFirmalar" />
             <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
           </AssociationSet>
+          <EntitySet Name="TBLCagriDetay" EntityType="DbisTakipModel.TBLCagriDetay" />
+          <AssociationSet Name="FK_TBLCagriDetay_TBLCagrilar" Association="DbisTakipModel.FK_TBLCagriDetay_TBLCagrilar">
+            <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
+            <End Role="TBLCagriDetay" EntitySet="TBLCagriDetay" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="TBLCagrilar">
           <Key>
@@ -332,6 +370,7 @@
           <Property Name="Tarih" Type="DateTime" Precision="0" />
           <NavigationProperty Name="TBLFirmalar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar" FromRole="TBLCagrilar" ToRole="TBLFirmalar" />
           <Property Name="Durum" Type="Boolean" />
+          <NavigationProperty Name="TBLCagriDetay" Relationship="DbisTakipModel.FK_TBLCagriDetay_TBLCagrilar" FromRole="TBLCagrilar" ToRole="TBLCagriDetay" />
         </EntityType>
         <Association Name="FK_TBLCagrilar_TBLFirmalar">
           <End Type="DbisTakipModel.TBLFirmalar" Role="TBLFirmalar" Multiplicity="0..1" />
@@ -342,6 +381,29 @@
             </Principal>
             <Dependent Role="TBLCagrilar">
               <PropertyRef Name="CagriFirma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TBLCagriDetay">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cagri" Type="Int32" />
+          <Property Name="Aciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+          <Property Name="Saat" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="TBLCagrilar" Relationship="DbisTakipModel.FK_TBLCagriDetay_TBLCagrilar" FromRole="TBLCagriDetay" ToRole="TBLCagrilar" />
+        </EntityType>
+        <Association Name="FK_TBLCagriDetay_TBLCagrilar">
+          <End Type="DbisTakipModel.TBLCagrilar" Role="TBLCagrilar" Multiplicity="0..1" />
+          <End Type="DbisTakipModel.TBLCagriDetay" Role="TBLCagriDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLCagrilar">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TBLCagriDetay">
+              <PropertyRef Name="Cagri" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -371,6 +433,8 @@
           <EntitySetMapping Name="TBLFirmalar">
             <EntityTypeMapping TypeName="DbisTakipModel.TBLFirmalar">
               <MappingFragment StoreEntitySet="TBLFirmalar">
+                <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
                 <ScalarProperty Name="Yetkili" ColumnName="Yetkili" />
@@ -409,6 +473,7 @@
           <EntitySetMapping Name="TBLPersonel">
             <EntityTypeMapping TypeName="DbisTakipModel.TBLPersonel">
               <MappingFragment StoreEntitySet="TBLPersonel">
+                <ScalarProperty Name="Rol" ColumnName="Rol" />
                 <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Ad" ColumnName="Ad" />
@@ -428,6 +493,17 @@
                 <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
                 <ScalarProperty Name="Konu" ColumnName="Konu" />
                 <ScalarProperty Name="CagriFirma" ColumnName="CagriFirma" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLCagriDetay">
+            <EntityTypeMapping TypeName="DbisTakipModel.TBLCagriDetay">
+              <MappingFragment StoreEntitySet="TBLCagriDetay">
+                <ScalarProperty Name="Saat" ColumnName="Saat" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Cagri" ColumnName="Cagri" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

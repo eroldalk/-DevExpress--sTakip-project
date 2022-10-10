@@ -32,7 +32,7 @@ namespace is_takip_project.Formlar
             t.Durum = true;
             t.GorevAlan = int.Parse(lookUpEdit1.EditValue.ToString());
             t.Tarih=DateTime.Parse(TxtTarih.Text);
-            t.Gorev_Veren=int.Parse(txtGorevveren.Text);
+            t.Gorev_Veren = 1;
             db.TBLGorevler.Add(t);
             db.SaveChanges();
             XtraMessageBox.Show("Görev Başırılı Olarak Tanımlandı", "Bilgi" ,

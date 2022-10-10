@@ -181,6 +181,7 @@
             this.Name = "frmDepartmanlar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Departmanlar";
+            this.Load += new System.EventHandler(this.frmDepartmanlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtıd.Properties)).EndInit();

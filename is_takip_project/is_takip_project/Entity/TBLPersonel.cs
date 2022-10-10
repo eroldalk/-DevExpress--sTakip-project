@@ -29,6 +29,7 @@ namespace is_takip_project.Entity
         public string Gorsel { get; set; }
         public Nullable<int> Departman { get; set; }
         public Nullable<bool> Durum { get; set; }
+        public string Rol { get; set; }
     
         public virtual TBLdepartmanlar TBLdepartmanlar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

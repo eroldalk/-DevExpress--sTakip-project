@@ -89,6 +89,9 @@
     <Compile Include="Entity\TBLAdmin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TBLCagriDetay.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TBLCagrilar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -112,6 +115,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\frmAktifcagrılar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmAktifcagrılar.Designer.cs">
+      <DependentUpon>frmAktifcagrılar.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\frmAnaform.cs">
       <SubType>Form</SubType>
@@ -143,6 +152,12 @@
     <Compile Include="Formlar\frmGörevListesi.Designer.cs">
       <DependentUpon>frmGörevListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\frmpasifcagrilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\frmpasifcagrilar.Designer.cs">
+      <DependentUpon>frmpasifcagrilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlar\frmpersoneller.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,10 +170,49 @@
     <Compile Include="Formlar\frmpersonelleristatistik.Designer.cs">
       <DependentUpon>frmpersonelleristatistik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorev\frmAktifGorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorev\frmAktifGorevler.Designer.cs">
+      <DependentUpon>frmAktifGorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorev\frmcagrıdetaygiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorev\frmcagrıdetaygiris.Designer.cs">
+      <DependentUpon>frmcagrıdetaygiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorev\frmcagrilistesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorev\frmcagrilistesi.Designer.cs">
+      <DependentUpon>frmcagrilistesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorev\frmpasifgorevler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorev\frmpasifgorevler.Designer.cs">
+      <DependentUpon>frmpasifgorevler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGorev\frmpersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGorev\frmpersonel.Designer.cs">
+      <DependentUpon>frmpersonel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\frmAktifcagrılar.resx">
+      <DependentUpon>frmAktifcagrılar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\frmAnaform.resx">
       <DependentUpon>frmAnaform.cs</DependentUpon>
@@ -181,6 +235,24 @@
     <EmbeddedResource Include="Formlar\frmpersonelleristatistik.resx">
       <DependentUpon>frmpersonelleristatistik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorev\frmAktifGorevler.resx">
+      <DependentUpon>frmAktifGorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorev\frmcagrıdetaygiris.resx">
+      <DependentUpon>frmcagrıdetaygiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorev\frmcagrilistesi.resx">
+      <DependentUpon>frmcagrilistesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorev\frmpasifgorevler.resx">
+      <DependentUpon>frmpasifgorevler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGorev\frmpersonel.resx">
+      <DependentUpon>frmpersonel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,6 +262,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Entity\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -223,9 +296,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\boscheduler_32x321.png" />
+    <None Include="Resources\boscheduler_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

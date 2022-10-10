@@ -21,6 +21,8 @@
     <EntitySetMapping Name="TBLFirmalar">
       <EntityTypeMapping TypeName="DbisTakipModel.TBLFirmalar">
         <MappingFragment StoreEntitySet="TBLFirmalar">
+          <ScalarProperty Name="foto" ColumnName="foto" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
           <ScalarProperty Name="Yetkili" ColumnName="Yetkili" />
@@ -59,6 +61,7 @@
     <EntitySetMapping Name="TBLPersonel">
       <EntityTypeMapping TypeName="DbisTakipModel.TBLPersonel">
         <MappingFragment StoreEntitySet="TBLPersonel">
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
           <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
@@ -78,6 +81,17 @@
           <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
           <ScalarProperty Name="Konu" ColumnName="Konu" />
           <ScalarProperty Name="CagriFirma" ColumnName="CagriFirma" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLCagriDetay">
+      <EntityTypeMapping TypeName="DbisTakipModel.TBLCagriDetay">
+        <MappingFragment StoreEntitySet="TBLCagriDetay">
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Cagri" ColumnName="Cagri" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

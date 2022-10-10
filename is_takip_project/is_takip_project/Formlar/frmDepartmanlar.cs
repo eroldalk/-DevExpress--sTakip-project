@@ -71,7 +71,7 @@ namespace is_takip_project.Formlar
             var deger = db.TBLdepartmanlar.Find(x);
             deger.Ad = txtad.Text;
             db.SaveChanges();
-            XtraMessageBox.Show("Departman silme işlemi başarılı bir şekilde gerçekleşti", "Bilgi",
+            XtraMessageBox.Show("Departman güncelleme işlemi başarılı bir şekilde gerçekleşti", "Bilgi",
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             listele();
         }
@@ -80,6 +80,11 @@ namespace is_takip_project.Formlar
         {
             txtıd.Text=gridView1.GetFocusedRowCellValue("ID").ToString();
             txtad.Text = gridView1.GetFocusedRowCellValue("Ad").ToString();
+        }
+
+        private void frmDepartmanlar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
