@@ -76,6 +76,7 @@
     <EntitySetMapping Name="TBLCagrilar">
       <EntityTypeMapping TypeName="DbisTakipModel.TBLCagrilar">
         <MappingFragment StoreEntitySet="TBLCagrilar">
+          <ScalarProperty Name="CagriPersonel" ColumnName="CagriPersonel" />
           <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="Tarih" ColumnName="Tarih" />
           <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />

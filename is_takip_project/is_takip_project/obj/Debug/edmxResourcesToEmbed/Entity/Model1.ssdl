@@ -28,6 +28,7 @@
     <Property Name="Aciklama" Type="nvarchar(max)" />
     <Property Name="Durum" Type="bit" />
     <Property Name="Tarih" Type="date" />
+    <Property Name="CagriPersonel" Type="int" />
   </EntityType>
   <EntityType Name="TBLdepartmanlar">
     <Key>
@@ -111,6 +112,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TBLCagrilar_TBLPersonel">
+    <End Role="TBLPersonel" Type="Self.TBLPersonel" Multiplicity="0..1" />
+    <End Role="TBLCagrilar" Type="Self.TBLCagrilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLPersonel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLCagrilar">
+        <PropertyRef Name="CagriPersonel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TBLGorevDetaylar_TBLGorevler">
     <End Role="TBLGorevler" Type="Self.TBLGorevler" Multiplicity="0..1" />
     <End Role="TBLGorevDetaylar" Type="Self.TBLGorevDetaylar" Multiplicity="*" />
@@ -174,6 +187,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_TBLCagrilar_TBLFirmalar" Association="Self.FK_TBLCagrilar_TBLFirmalar">
       <End Role="TBLFirmalar" EntitySet="TBLFirmalar" />
+      <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLCagrilar_TBLPersonel" Association="Self.FK_TBLCagrilar_TBLPersonel">
+      <End Role="TBLPersonel" EntitySet="TBLPersonel" />
       <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
     </AssociationSet>
     <AssociationSet Name="FK_TBLGorevDetaylar_TBLGorevler" Association="Self.FK_TBLGorevDetaylar_TBLGorevler">

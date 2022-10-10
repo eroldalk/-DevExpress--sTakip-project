@@ -74,6 +74,7 @@
     <NavigationProperty Name="TBLGorevler1" Relationship="Self.FK_TBLGorevler_TBLPersonel1" FromRole="TBLPersonel" ToRole="TBLGorevler" />
     <Property Name="Durum" Type="Boolean" />
     <Property Name="Rol" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="TBLCagrilar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLPersonel" FromRole="TBLPersonel" ToRole="TBLCagrilar" />
   </EntityType>
   <Association Name="FK_TBLPersonel_TBLdepartmanlar">
     <End Role="TBLdepartmanlar" Type="Self.TBLdepartmanlar" Multiplicity="0..1" />
@@ -156,6 +157,10 @@
       <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
       <End Role="TBLCagriDetay" EntitySet="TBLCagriDetay" />
     </AssociationSet>
+    <AssociationSet Name="FK_TBLCagrilar_TBLPersonel" Association="DbisTakipModel.FK_TBLCagrilar_TBLPersonel">
+      <End Role="TBLPersonel" EntitySet="TBLPersonel" />
+      <End Role="TBLCagrilar" EntitySet="TBLCagrilar" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="TBLCagrilar">
     <Key>
@@ -169,6 +174,8 @@
     <NavigationProperty Name="TBLFirmalar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar" FromRole="TBLCagrilar" ToRole="TBLFirmalar" />
     <Property Name="Durum" Type="Boolean" />
     <NavigationProperty Name="TBLCagriDetay" Relationship="DbisTakipModel.FK_TBLCagriDetay_TBLCagrilar" FromRole="TBLCagrilar" ToRole="TBLCagriDetay" />
+    <Property Name="CagriPersonel" Type="Int32" />
+    <NavigationProperty Name="TBLPersonel" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLPersonel" FromRole="TBLCagrilar" ToRole="TBLPersonel" />
   </EntityType>
   <Association Name="FK_TBLCagrilar_TBLFirmalar">
     <End Type="DbisTakipModel.TBLFirmalar" Role="TBLFirmalar" Multiplicity="0..1" />
@@ -202,6 +209,18 @@
       </Principal>
       <Dependent Role="TBLCagriDetay">
         <PropertyRef Name="Cagri" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLCagrilar_TBLPersonel">
+    <End Type="DbisTakipModel.TBLPersonel" Role="TBLPersonel" Multiplicity="0..1" />
+    <End Type="DbisTakipModel.TBLCagrilar" Role="TBLCagrilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLPersonel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLCagrilar">
+        <PropertyRef Name="CagriPersonel" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

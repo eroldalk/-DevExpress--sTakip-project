@@ -147,3 +147,4 @@ C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_pro
 C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\obj\Debug\is_takip_project.Login.frmlogin.resources
 C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\obj\Debug\is_takip_project.PersonelGorev.frmcagrıdetaygiris.resources
 C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\obj\Debug\is_takip_project.PersonelGorev.frmcagrilistesi.resources
+C:\Users\Lenovo\Desktop\DevExpress-isTakip-project\is_takip_project\is_takip_project\obj\Debug\is_takip_project.Formlar.frmCagrıAtama.resources

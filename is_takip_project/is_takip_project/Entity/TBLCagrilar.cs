@@ -26,9 +26,11 @@ namespace is_takip_project.Entity
         public string Aciklama { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
         public Nullable<bool> Durum { get; set; }
+        public Nullable<int> CagriPersonel { get; set; }
     
         public virtual TBLFirmalar TBLFirmalar { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLCagriDetay> TBLCagriDetay { get; set; }
+        public virtual TBLPersonel TBLPersonel { get; set; }
     }
 }

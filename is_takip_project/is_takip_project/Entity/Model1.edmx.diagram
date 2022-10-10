@@ -19,6 +19,7 @@
         <AssociationConnector Association="DbisTakipModel.FK_TBLCagrilar_TBLFirmalar" />
         <EntityTypeShape EntityType="DbisTakipModel.TBLCagriDetay" Width="1.5" PointX="7.25" PointY="5.375" />
         <AssociationConnector Association="DbisTakipModel.FK_TBLCagriDetay_TBLCagrilar" />
+        <AssociationConnector Association="DbisTakipModel.FK_TBLCagrilar_TBLPersonel" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

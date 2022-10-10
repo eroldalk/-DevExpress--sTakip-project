@@ -31,7 +31,9 @@ namespace is_takip_project.Formlar
                                 x.TBLFirmalar.Telefon,
                                 x.Konu,
                                 x.Aciklama,
+                               Personel = x.TBLPersonel.Ad,
                                 x.Durum
+                                
                             }
                             ).Where(y => y.Durum == true).ToList();
 
@@ -39,6 +41,11 @@ namespace is_takip_project.Formlar
             gridControl1.DataSource = degerler;
         }
 
-       
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            frmCagrıAtama fr = new frmCagrıAtama();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+            fr.Show();
+        }
     }
 }

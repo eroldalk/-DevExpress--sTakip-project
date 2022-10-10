@@ -19,6 +19,7 @@ namespace is_takip_project.Entity
         {
             this.TBLGorevler = new HashSet<TBLGorevler>();
             this.TBLGorevler1 = new HashSet<TBLGorevler>();
+            this.TBLCagrilar = new HashSet<TBLCagrilar>();
         }
     
         public int ID { get; set; }
@@ -36,5 +37,7 @@ namespace is_takip_project.Entity
         public virtual ICollection<TBLGorevler> TBLGorevler { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLGorevler> TBLGorevler1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TBLCagrilar> TBLCagrilar { get; set; }
     }
 }
