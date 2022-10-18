@@ -29,5 +29,12 @@ namespace is_takip_project.Login
                 PersonelGorev.frmpersonel();
             fr.Show();
         }
+
+        private void frmlogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCagrıAtama));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.Btnkaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.Btnvazgec = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtkonu = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.CheckEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtTarih = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtcagriid = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.Btnkaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.Btnvazgec = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
@@ -92,76 +92,6 @@
             this.panelControl1.Size = new System.Drawing.Size(489, 421);
             this.panelControl1.TabIndex = 22;
             // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(96, 288);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(60, 16);
-            this.labelControl6.TabIndex = 18;
-            this.labelControl6.Text = "Açıklama :";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(96, 234);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(47, 16);
-            this.labelControl5.TabIndex = 16;
-            this.labelControl5.Text = "Durum :";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(96, 29);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(55, 16);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Cagrı ID :";
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(96, 180);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(39, 16);
-            this.labelControl4.TabIndex = 11;
-            this.labelControl4.Text = "Tarih :";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(96, 132);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(71, 16);
-            this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Görev Alan :";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(96, 83);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(37, 16);
-            this.labelControl3.TabIndex = 20;
-            this.labelControl3.Text = "Konu :";
-            // 
-            // Btnkaydet
-            // 
-            this.Btnkaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Btnkaydet.Appearance.Options.UseFont = true;
-            this.Btnkaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btnkaydet.ImageOptions.Image")));
-            this.Btnkaydet.Location = new System.Drawing.Point(358, 454);
-            this.Btnkaydet.Name = "Btnkaydet";
-            this.Btnkaydet.Size = new System.Drawing.Size(143, 43);
-            this.Btnkaydet.TabIndex = 23;
-            this.Btnkaydet.Text = "Kaydet";
-            // 
-            // Btnvazgec
-            // 
-            this.Btnvazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Btnvazgec.Appearance.Options.UseFont = true;
-            this.Btnvazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btnvazgec.ImageOptions.Image")));
-            this.Btnvazgec.Location = new System.Drawing.Point(217, 454);
-            this.Btnvazgec.Name = "Btnvazgec";
-            this.Btnvazgec.Size = new System.Drawing.Size(135, 43);
-            this.Btnvazgec.TabIndex = 21;
-            this.Btnvazgec.Text = "Vazgeç";
-            // 
             // pictureEdit3
             // 
             this.pictureEdit3.EditValue = global::is_takip_project.Properties.Resources.inlinewithtext_32x32;
@@ -174,6 +104,14 @@
             this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit3.Size = new System.Drawing.Size(60, 48);
             this.pictureEdit3.TabIndex = 19;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(96, 83);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(37, 16);
+            this.labelControl3.TabIndex = 20;
+            this.labelControl3.Text = "Konu :";
             // 
             // txtkonu
             // 
@@ -194,6 +132,14 @@
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit1.Size = new System.Drawing.Size(60, 48);
             this.pictureEdit1.TabIndex = 0;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(96, 288);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(60, 16);
+            this.labelControl6.TabIndex = 18;
+            this.labelControl6.Text = "Açıklama :";
             // 
             // CheckEdit1
             // 
@@ -235,6 +181,14 @@
             this.TxtTarih.Size = new System.Drawing.Size(269, 22);
             this.TxtTarih.TabIndex = 14;
             // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(96, 234);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(47, 16);
+            this.labelControl5.TabIndex = 16;
+            this.labelControl5.Text = "Durum :";
+            // 
             // txtAciklama
             // 
             this.txtAciklama.Location = new System.Drawing.Point(207, 287);
@@ -254,6 +208,22 @@
             this.pictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit5.Size = new System.Drawing.Size(60, 48);
             this.pictureEdit5.TabIndex = 15;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(96, 29);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(55, 16);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "Cagrı ID :";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(96, 180);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(39, 16);
+            this.labelControl4.TabIndex = 11;
+            this.labelControl4.Text = "Tarih :";
             // 
             // txtcagriid
             // 
@@ -285,6 +255,14 @@
             this.lookUpEdit1.Size = new System.Drawing.Size(269, 22);
             this.lookUpEdit1.TabIndex = 3;
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(96, 132);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(71, 16);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "Görev Alan :";
+            // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
@@ -297,6 +275,30 @@
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit2.Size = new System.Drawing.Size(60, 48);
             this.pictureEdit2.TabIndex = 4;
+            // 
+            // Btnkaydet
+            // 
+            this.Btnkaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Btnkaydet.Appearance.Options.UseFont = true;
+            this.Btnkaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btnkaydet.ImageOptions.Image")));
+            this.Btnkaydet.Location = new System.Drawing.Point(358, 454);
+            this.Btnkaydet.Name = "Btnkaydet";
+            this.Btnkaydet.Size = new System.Drawing.Size(143, 43);
+            this.Btnkaydet.TabIndex = 23;
+            this.Btnkaydet.Text = "Kaydet";
+            this.Btnkaydet.Click += new System.EventHandler(this.Btnkaydet_Click);
+            // 
+            // Btnvazgec
+            // 
+            this.Btnvazgec.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Btnvazgec.Appearance.Options.UseFont = true;
+            this.Btnvazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btnvazgec.ImageOptions.Image")));
+            this.Btnvazgec.Location = new System.Drawing.Point(217, 454);
+            this.Btnvazgec.Name = "Btnvazgec";
+            this.Btnvazgec.Size = new System.Drawing.Size(135, 43);
+            this.Btnvazgec.TabIndex = 21;
+            this.Btnvazgec.Text = "Vazgeç";
+            this.Btnvazgec.Click += new System.EventHandler(this.Btnvazgec_Click);
             // 
             // frmCagrıAtama
             // 

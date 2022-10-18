@@ -63,6 +63,26 @@ namespace is_takip_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bocountry_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("bocountry_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bolocalization_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("bolocalization_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boscheduler_32x32 {
             get {
                 object obj = ResourceManager.GetObject("boscheduler_32x32", resourceCulture);
