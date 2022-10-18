@@ -305,6 +305,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\properties_32x32.png" />
     <None Include="Resources\bocountry_32x32.png" />
     <None Include="Resources\bolocalization_32x32.png" />
     <None Include="Resources\inlinewithtext_32x32.png" />

@@ -75,6 +75,7 @@
     <Property Name="Durum" Type="Boolean" />
     <Property Name="Rol" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <NavigationProperty Name="TBLCagrilar" Relationship="DbisTakipModel.FK_TBLCagrilar_TBLPersonel" FromRole="TBLPersonel" ToRole="TBLCagrilar" />
+    <Property Name="Sifre" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_TBLPersonel_TBLdepartmanlar">
     <End Role="TBLdepartmanlar" Type="Self.TBLdepartmanlar" Multiplicity="0..1" />

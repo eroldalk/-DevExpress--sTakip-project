@@ -19,8 +19,13 @@ namespace is_takip_project.PersonelGorev
             InitializeComponent();
         }
         DbisTakipEntities db = new DbisTakipEntities();
+        public string mail2;
         private void frmpasifgorevler_Load(object sender, EventArgs e)
         {
+
+            var personelid = db.TBLPersonel.Where(x => x.Mail == mail2).Select(y => y.ID).FirstOrDefault();
+
+
 
             var degerler = (from x in db.TBLGorevler
                             select new
@@ -31,7 +36,7 @@ namespace is_takip_project.PersonelGorev
                                 x.GorevAlan,
                                 x.Durum
 
-                            }).Where(x => x.GorevAlan == 7 && x.Durum == false).ToList();
+                            }).Where(x => x.GorevAlan == personelid && x.Durum == false).ToList();
 
             gridControl1.DataSource = degerler;
 

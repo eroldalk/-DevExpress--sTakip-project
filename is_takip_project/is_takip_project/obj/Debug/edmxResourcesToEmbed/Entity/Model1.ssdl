@@ -87,6 +87,7 @@
     <Property Name="Departman" Type="int" />
     <Property Name="Durum" Type="bit" />
     <Property Name="Rol" Type="char" MaxLength="1" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <Association Name="FK_TBLCagriDetay_TBLCagrilar">
     <End Role="TBLCagrilar" Type="Self.TBLCagrilar" Multiplicity="0..1" />

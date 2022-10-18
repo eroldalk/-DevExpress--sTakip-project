@@ -16,11 +16,12 @@ namespace is_takip_project.PersonelGorev
         {
             InitializeComponent();
         }
-
+        public string mail;
         private void Btnaktifgorev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             PersonelGorev.frmAktifGorevler  frm = new PersonelGorev.frmAktifGorevler();
             frm.MdiParent = this;
+            frm.mail2 = mail;
             frm.Show();
         }
 
@@ -28,6 +29,7 @@ namespace is_takip_project.PersonelGorev
         {
             PersonelGorev.frmpasifgorevler frm = new PersonelGorev.frmpasifgorevler();
             frm.MdiParent = this;
+            frm.mail2 = mail;
             frm.Show();
         }
 
@@ -35,7 +37,13 @@ namespace is_takip_project.PersonelGorev
         {
             PersonelGorev.frmcagrilistesi frm = new PersonelGorev.frmcagrilistesi();
             frm.MdiParent = this;
+            frm.mail2 = mail;
             frm.Show();
+        }
+
+        private void frmpersonel_Load(object sender, EventArgs e)
+        {
+            this.Text = "Personel"+" : "+mail.ToString();
         }
     }
 }
