@@ -21,6 +21,11 @@ namespace is_takip_project.PersonelGorev
         public string mail2;
         private void frmGorevlistesi_Load(object sender, EventArgs e)
         {
+
+            var personelid = db.TBLPersonel.Where(x => x.Mail == mail2).Select(y => y.ID).FirstOrDefault();
+
+
+
             gridControl1.DataSource=(from x in db.TBLCagrilar
                                      select new
                                      {
